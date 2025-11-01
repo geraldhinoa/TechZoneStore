@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechZone Store - HP & Laptop Terlengkap</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome untuk ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "dark-blue": "#1e3a8a",
+              "light-blue": "#3b82f6",
+              orange: "#fb923c",
+              "orange-dark": "#ea580c",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav
+      id="navbar"
+      class="navbar-scroll fixed top-0 w-full bg-white shadow-lg z-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-store text-3xl text-dark-blue"></i>
+            <span class="text-2xl font-bold text-dark-blue">TechZone</span>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-gray-700 hover:text-orange transition-colors font-medium"
+              >Home</a
+            >
+            <a
+              href="#produk"
+              class="nav-link text-gray-700 hover:text-orange transition-colors font-medium"
+              >Produk</a
+            >
+            <a
+              href="#tentang"
+              class="nav-link text-gray-700 hover:text-orange transition-colors font-medium"
+              >Tentang Kami</a
+            >
+            <a
+              href="#kontak"
+              class="nav-link text-gray-700 hover:text-orange transition-colors font-medium"
+              >Kontak</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-dark-blue">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="#home"
+            class="block py-2 text-gray-700 hover:text-orange transition-colors font-medium"
+            >Home</a
+          >
+          <a
+            href="#produk"
+            class="block py-2 text-gray-700 hover:text-orange transition-colors font-medium"
+            >Produk</a
+          >
+          <a
+            href="#tentang"
+            class="block py-2 text-gray-700 hover:text-orange transition-colors font-medium"
+            >Tentang Kami</a
+          >
+          <a
+            href="#kontak"
+            class="block py-2 text-gray-700 hover:text-orange transition-colors font-medium"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-gradient min-h-screen flex items-center pt-20"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="text-white" data-aos="fade-right">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              Temukan HP & Laptop Impianmu di TechZone
+            </h1>
+            <p class="text-xl mb-8 opacity-90">Harga Terbaik, Garansi Resmi!</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                onclick="scrollToProducts()"
+                class="btn-primary px-8 py-4 rounded-full text-white font-bold text-lg shadow-xl"
+              >
+                <i class="fas fa-shopping-cart mr-2"></i> Belanja Sekarang
+              </button>
+              <button
+                onclick="playPromoVideo()"
+                class="bg-white text-dark-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
+              >
+                <i class="fas fa-play-circle mr-2"></i> Lihat Promo
+              </button>
+            </div>
+
+            <!-- Features -->
+            <div class="grid grid-cols-3 gap-4 mt-12">
+              <div class="text-center">
+                <i class="fas fa-shield-alt text-3xl mb-2"></i>
+                <p class="text-sm">Garansi Resmi</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-truck text-3xl mb-2"></i>
+                <p class="text-sm">Gratis Ongkir</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-undo text-3xl mb-2"></i>
+                <p class="text-sm">7 Hari Retur</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-left">
+            <div class="float-animation">
+              <img
+                src="https://www.kanakomputer.com/wp-content/uploads/2024/03/hp-store.png"
+                alt="TechZone Hero"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute -bottom-4 -left-4 bg-orange text-white px-6 py-3 rounded-full font-bold shimmer"
+            >
+              <i class="fas fa-fire mr-2"></i>Hot Sale!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produk" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark-blue mb-4">
+            Produk Unggulan Kami
+          </h2>
+          <p class="text-gray-600 text-lg">
+            Pilihan terbaik HP dan Laptop dengan harga terjangkau
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div
+          class="flex justify-center mb-8"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="bg-gray-100 rounded-full p-1 inline-flex">
+            <button
+              onclick="filterProducts('all')"
+              class="category-btn px-6 py-2 rounded-full font-medium transition-all"
+              data-category="all"
+            >
+              Semua
+            </button>
+            <button
+              onclick="filterProducts('hp')"
+              class="category-btn px-6 py-2 rounded-full font-medium transition-all"
+              data-category="hp"
+            >
+              HP
+            </button>
+            <button
+              onclick="filterProducts('laptop')"
+              class="category-btn px-6 py-2 rounded-full font-medium transition-all"
+              data-category="laptop"
+            >
+              Laptop
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="products-grid"
+        >
+          <!-- HP Samsung Galaxy S24 Ultra -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl min-h-[550px] flex flex-col justify-between"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-category="hp"
+          >
+            <div class="relative w-full h-64 overflow-hidden rounded-t-2xl">
+              <img
+                src="https://images.samsung.com/is/image/samsung/assets/id/smartphones/galaxy-s24-ultra/buy/01_S24Ultra-Group-KV_MO_0527_final.jpg"
+                alt="Samsung Galaxy S24 Ultra"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Best Seller
+              </span>
+            </div>
+
+            <div class="p-6 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="text-xl font-bold text-dark-blue mb-2">
+                  Samsung Galaxy S24 Ultra
+                </h3>
+                <div class="text-gray-600 mb-4">
+                  <p class="text-sm">
+                    <i class="fas fa-mobile-alt mr-2"></i>6.8" Dynamic AMOLED 2X
+                  </p>
+                  <p class="text-sm">
+                    <i class="fas fa-memory mr-2"></i>12GB RAM / 512GB Storage
+                  </p>
+                  <p class="text-sm">
+                    <i class="fas fa-camera mr-2"></i>200MP Quad Camera
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-3xl font-bold text-dark-blue"
+                    >Rp 19.999.000</span
+                  >
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+                <button
+                  onclick="addToCart('Samsung Galaxy S24 Ultra', 19999000)"
+                  class="btn-primary w-full py-3 rounded-lg text-white font-bold"
+                >
+                  <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- iPhone 15 Pro Max -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-category="hp"
+          >
+            <div class="relative">
+              <img
+                src="https://www.dxomark.com/wp-content/uploads/medias/post-155689/Apple-iPhone-15-Pro-Max_-blue-titanium_Yoast-image-packshot-review.jpg"
+                alt="iPhone 15 Pro Max"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-orange text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                New
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark-blue mb-2">
+                iPhone 15 Pro Max
+              </h3>
+              <div class="text-gray-600 mb-4">
+                <p class="text-sm">
+                  <i class="fas fa-mobile-alt mr-2"></i>6.7" Super Retina XDR
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-memory mr-2"></i>8GB RAM / 256GB Storage
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-camera mr-2"></i>48MP Pro Camera System
+                </p>
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-bold text-dark-blue"
+                  >Rp 25.499.000</span
+                >
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <button
+                onclick="addToCart('iPhone 15 Pro Max', 25499000)"
+                class="btn-primary w-full py-3 rounded-lg text-white font-bold"
+              >
+                <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+              </button>
+            </div>
+          </div>
+
+          <!-- Xiaomi 14 Ultra -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-category="hp"
+          >
+            <div class="relative">
+              <img
+                src="https://asset.kompas.com/crops/90AXAmlwOTdom3e16y0QehXkOck=/79x110:950x690/750x500/data/photo/2024/02/23/65d801abe1fa8.jpg"
+                alt="Xiaomi 14 Ultra"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Promo
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark-blue mb-2">
+                Xiaomi 14 Ultra
+              </h3>
+              <div class="text-gray-600 mb-4">
+                <p class="text-sm">
+                  <i class="fas fa-mobile-alt mr-2"></i>6.73" LTPO AMOLED
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-memory mr-2"></i>16GB RAM / 512GB Storage
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-camera mr-2"></i>Leica Quad Camera
+                </p>
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-bold text-dark-blue"
+                  >Rp 16.999.000</span
+                >
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <button
+                onclick="addToCart('Xiaomi 14 Ultra', 16999000)"
+                class="btn-primary w-full py-3 rounded-lg text-white font-bold"
+              >
+                <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+              </button>
+            </div>
+          </div>
+
+          <!-- ASUS ROG Zephyrus G14 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl flex flex-col justify-between"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-category="laptop"
+          >
+            <!-- Gambar -->
+            <div class="relative">
+              <img
+                src="https://images-cdn.ubuy.co.id/63712be5b27a080bb62424b3-asus-rog-zephyrus-g14-14-quot-fhd.jpg"
+                alt="ASUS ROG Zephyrus G14"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Gaming
+              </span>
+            </div>
+
+            <!-- Konten -->
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-dark-blue mb-2">
+                  ASUS ROG Zephyrus G14
+                </h3>
+                <div class="text-gray-600 mb-4">
+                  <p class="text-sm">
+                    <i class="fas fa-laptop mr-2"></i>14" 2.5K 165Hz Display
+                  </p>
+                  <p class="text-sm">
+                    <i class="fas fa-microchip mr-2"></i>AMD Ryzen 9 / RTX 4060
+                  </p>
+                  <p class="text-sm">
+                    <i class="fas fa-memory mr-2"></i>32GB RAM / 1TB SSD
+                  </p>
+                </div>
+              </div>
+
+              <!-- Harga + Rating + Tombol -->
+              <div class="mt-auto">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-3xl font-bold text-dark-blue"
+                    >Rp 22.999.000</span
+                  >
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+                <button
+                  onclick="addToCart('ASUS ROG Zephyrus G14', 22999000)"
+                  class="btn-primary w-full py-3 rounded-lg text-white font-bold transition hover:brightness-110"
+                >
+                  <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- MacBook Air M3 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-category="laptop"
+          >
+            <div class="relative">
+              <img
+                src="https://macstore.id/wp-content/uploads/2024/04/macbook-air-15-inci_169.png.jpeg"
+                alt="MacBook Air"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Premium
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark-blue mb-2">
+                MacBook Air M3
+              </h3>
+              <div class="text-gray-600 mb-4">
+                <p class="text-sm">
+                  <i class="fas fa-laptop mr-2"></i>13.6" Liquid Retina Display
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-microchip mr-2"></i>Apple M3 Chip
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-memory mr-2"></i>16GB RAM / 512GB SSD
+                </p>
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-bold text-dark-blue"
+                  >Rp 19.499.000</span
+                >
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <button
+                onclick="addToCart('MacBook Air M3', 19499000)"
+                class="btn-primary w-full py-3 rounded-lg text-white font-bold"
+              >
+                <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+              </button>
+            </div>
+          </div>
+
+          <!-- Lenovo Legion 5 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-category="laptop"
+          >
+            <div class="relative">
+              <img
+                src="https://alvatech.co.id/wp-content/uploads/2025/03/83DG000AID-3.jpg"
+                alt="Lenovo Legion"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Hot Deal
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark-blue mb-2">
+                Lenovo Legion 5
+              </h3>
+              <div class="text-gray-600 mb-4">
+                <p class="text-sm">
+                  <i class="fas fa-laptop mr-2"></i>15.6" FHD 165Hz IPS
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-microchip mr-2"></i>Intel Core i7 / RTX 4060
+                </p>
+                <p class="text-sm">
+                  <i class="fas fa-memory mr-2"></i>16GB RAM / 1TB SSD
+                </p>
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-bold text-dark-blue"
+                  >Rp 18.999.000</span
+                >
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <button
+                onclick="addToCart('Lenovo Legion 5', 18999000)"
+                class="btn-primary w-full py-3 rounded-lg text-white font-bold"
+              >
+                <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="tentang" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-4xl font-bold text-dark-blue mb-6">
+              Tentang TechZone Store
+            </h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              TechZone Store adalah toko online terpercaya yang menyediakan
+              berbagai macam HP dan Laptop berkualitas tinggi. Kami berkomitmen
+              untuk memberikan produk original dengan garansi resmi kepada
+              seluruh pelanggan di Indonesia.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Dengan pengalaman lebih dari 5 tahun, kami telah melayani ribuan
+              pelanggan dengan kepuasan tertinggi. Semua produk yang kami jual
+              adalah 100% original dan dilengkapi dengan garansi resmi dari
+              distributor.
+            </p>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-orange mb-2">5000+</div>
+                <p class="text-sm text-gray-600">Pelanggan Puas</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-orange mb-2">100+</div>
+                <p class="text-sm text-gray-600">Produk Variasi</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-orange mb-2">24/7</div>
+                <p class="text-sm text-gray-600">Layanan Support</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span class="text-gray-700">Produk Original</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span class="text-gray-700">Garansi Resmi</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span class="text-gray-700">Pengiriman Seluruh Indonesia</span>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <img
+              src="https://megacom.id/wp-content/uploads/2022/11/purimall2.jpg"
+              alt="About TechZone"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark-blue mb-4">Hubungi Kami</h2>
+          <p class="text-gray-600 text-lg">
+            Ada pertanyaan? Kami siap membantu Anda!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <!-- Contact Form -->
+          <div data-aos="fade-right">
+            <form id="contact-form" class="bg-gray-50 p-8 rounded-2xl">
+              <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full p-3 border rounded-lg"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full p-3 border rounded-lg"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Pesan</label
+                >
+                <textarea
+                  id="message"
+                  class="w-full p-3 border rounded-lg"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold py-3 rounded-xl hover:from-orange-600 hover:to-orange-700 transition duration-300 flex items-center justify-center gap-2 shadow-md"
+              >
+                <i class="fas fa-paper-plane"></i> Kirim Pesan
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info & Social Media -->
+          <div data-aos="fade-left">
+            <div class="bg-gray-50 p-8 rounded-2xl h-full">
+              <h3 class="text-2xl font-bold text-dark-blue mb-6">
+                Informasi Kontak
+              </h3>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-orange text-xl w-8"></i>
+                  <span class="text-gray-700"
+                    >Jl. Teknologi No. 123, Jakarta Selatan</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-phone text-orange text-xl w-8"></i>
+                  <span class="text-gray-700">+62 812-3456-7890</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-envelope text-orange text-xl w-8"></i>
+                  <span class="text-gray-700">info@techzone-store.com</span>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-bold text-dark-blue mb-4">Ikuti Kami</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  onclick="openSocial('instagram')"
+                  class="bg-gradient-to-br from-purple-600 to-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  onclick="openSocial('whatsapp')"
+                  class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  onclick="openSocial('shopee')"
+                  class="bg-orange text-white w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <i class="fas fa-shopping-bag text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  onclick="openSocial('facebook')"
+                  class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+              </div>
+
+              <!-- Business Hours -->
+              <div class="mt-8 p-4 bg-white rounded-lg">
+                <h4 class="font-bold text-dark-blue mb-2">Jam Operasional</h4>
+                <p class="text-gray-600 text-sm">
+                  Senin - Jumat: 09:00 - 21:00
+                </p>
+                <p class="text-gray-600 text-sm">
+                  Sabtu - Minggu: 10:00 - 20:00
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-blue text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <div class="flex items-center space-x-2 mb-2">
+              <i class="fas fa-store text-2xl"></i>
+              <span class="text-xl font-bold">TechZone Store</span>
+            </div>
+            <p class="text-sm opacity-75">
+              © 2025 TechZone Store. All Rights Reserved.
+            </p>
+          </div>
+
+          <div class="flex space-x-6">
+            <a href="#" class="hover:text-orange transition-colors"
+              >Kebijakan Privasi</a
+            >
+            <a href="#" class="hover:text-orange transition-colors"
+              >Syarat & Ketentuan</a
+            >
+            <a href="#" class="hover:text-orange transition-colors">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div
+      id="cart-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+    >
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative">
+          <button
+            onclick="closeCart()"
+            class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          >
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+
+          <h3 class="text-2xl font-bold text-dark-blue mb-4">
+            <i class="fas fa-shopping-cart mr-2"></i>Keranjang Belanja
+          </h3>
+
+          <div id="cart-items" class="mb-4 max-h-64 overflow-y-auto">
+            <!-- Cart items will be inserted here -->
+          </div>
+
+          <div class="border-t pt-4">
+            <div class="flex justify-between mb-4">
+              <span class="font-bold text-lg">Total:</span>
+              <span id="cart-total" class="font-bold text-xl text-orange"
+                >Rp 0</span
+              >
+            </div>
+            <button
+              onclick="checkout()"
+              class="btn-primary w-full py-3 rounded-lg text-white font-bold"
+            >
+              <i class="fas fa-credit-card mr-2"></i>Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div
+      id="toast"
+      class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition-transform z-50"
+    >
+      <div class="flex items-center">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span id="toast-message">Produk berhasil ditambahkan!</span>
+      </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <button
+      onclick="openCart()"
+      class="fixed bottom-4 right-4 bg-orange text-white w-14 h-14 rounded-full shadow-lg hover:scale-110 transition-transform z-40"
+    >
+      <i class="fas fa-shopping-cart text-xl"></i>
+      <span
+        id="cart-count"
+        class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center"
+        >0</span
+      >
+    </button>
+
+    <!-- PASTIKAN SCRIPT DI BAWAH INI ADA DAN BENAR LETAKNYA -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
